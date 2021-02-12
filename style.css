@@ -11,6 +11,10 @@ html {
   overflow: hidden;
 }
 
+main {
+  transform: scale(0.9);
+}
+
 form {
   display: flex;
   justify-content: center;
@@ -21,10 +25,16 @@ form {
 #search-box {
   padding: 1%;
   padding-left: 2%;
-  width: 65vh;
+  width: 85vh;
+  height: 3vh;
   border-radius: 35px;
   border: none;
   outline: none;
+}
+
+#search-box::-webkit-input-placeholder {
+  transform: scale(1.5);
+  transform-origin: 0% 50%;
 }
 
 #time {
@@ -34,7 +44,7 @@ form {
   text-align: center;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 2px;
-  top: 29%;
+  top: 33%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -43,13 +53,13 @@ form {
 #shortcuts {
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: auto;
+  grid-template-rows: 50% 50%;
   justify-items: center;
   align-items: center;
   width: 90vh;
-  height: 40vh;
+  height: 35vh;
   position: absolute;
-  bottom: 12%;
+  bottom: 1%;
   left: 50%;
   -ms-transform: translate(-50%, 0%);
   transform: translate(-50%, 0%);
@@ -63,7 +73,6 @@ form {
   width: 20vh;
   height: 20vh;
   border-radius: 15px;
-  /* margin-bottom: 1%; */
 }
 
 .shortcut:hover {
