@@ -6,41 +6,98 @@
 body,
 html {
   height: 100%;
-  background-image: url('background.jpg');
+  background: url('background.jpg');
   background-size: cover;
-}
-
-main {
-  filter: grayscale(1);
+  overflow: hidden;
 }
 
 form {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 85vh;
 }
 
 #search-box {
   padding: 1%;
-  padding-left: 1.5%;
-  width: 50vh;
+  padding-left: 2%;
+  width: 65vh;
   border-radius: 35px;
   border: none;
   outline: none;
 }
 
 #time {
-  z-index: 1000;
   position: absolute;
   font-size: 68px;
   color: white;
   text-align: center;
-  top: 40%;
-  left: 50%;
-  mix-blend-mode: difference;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   font-family: 'Poppins', sans-serif;
   letter-spacing: 2px;
+  top: 29%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+#shortcuts {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+  width: 90vh;
+  height: 40vh;
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+.shortcut {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20vh;
+  height: 20vh;
+  border-radius: 15px;
+  /* margin-bottom: 1%; */
+}
+
+.shortcut:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, .1);
+}
+
+.shortcut__circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: white;
+  margin: 10px;
+  width: 60px;
+  height: 60px;
+}
+
+.shortcut__title {
+  color: white;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  left: 50%;
+}
+
+a {
+  display: block;
+  /* height: 100%;
+  width: 100%; */
+  text-decoration: none;
+}
+
+.shortcut__circle img {
+  width: 34px;
+  height: 34px;
 }
